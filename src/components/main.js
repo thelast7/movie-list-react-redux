@@ -3,7 +3,11 @@ import { Switch, Route, Link } from 'react-router-dom'
 import { Layout, Menu } from 'antd'
 import pageRoute from './pageRoute'
 
-const { Header, Content, Footer, Sider } = Layout;
+const {
+  // Header,
+  Content,
+  Sider
+} = Layout;
 
 class MainApp extends Component {
   state = {
@@ -30,7 +34,7 @@ class MainApp extends Component {
           </Menu>
         </Sider>
         <Layout className="site-layout">
-          <Header />
+          {/* <Header /> */}
           <Content style={{ margin: '0 16px' }}>
             <Switch>
               {pageRoute && pageRoute.map((val, i) => (
@@ -43,7 +47,6 @@ class MainApp extends Component {
               ))}
             </Switch>
           </Content>
-          <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
         </Layout>
       </Layout>
     );
